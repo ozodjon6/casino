@@ -1,4 +1,30 @@
 /* Header page */
+.hero-page {
+    margin-bottom: 30vh;
+    position: relative;
+
+    @include respond(mobilemini) {
+      margin-bottom: 90px;
+    }
+}
+.hero-page::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../images/image-2.png), url(../../images/image-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    @include respond(mobilemini) {
+      background-size: cover;
+    }
+}
+
+.hero-page__connect::before {
+  background-image: url(../../images/image-3.png);
+}
 .header-page {
     display: flex;
     align-items: center;
@@ -62,5 +88,239 @@
     @include respond(mobilemini) {
       margin-left: 0;
       margin-top: 10px;
+    }
+}
+
+/* Hero page */
+
+.hero-page__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(desktop) {
+      flex-direction: column-reverse;
+    }
+}
+
+.hero-page__connect {
+  @include respond(mobilemini) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero-page__connect .hero-page__head {
+  @include respond(mobilemini) {
+    margin-bottom: 0;
+  }
+}
+
+.hero-page__connect .hero-page__col {
+  width: 50%;
+
+  @include respond(desktop) {
+    width: 100%;
+  }
+}
+
+.hero-page__col:last-child {
+    @include respond(desktop) {
+      width: 60%;
+    }
+
+    @include respond(mobilemini) {
+      width: 100%;
+      margin: 0 auto;
+    }
+}
+
+.hero-page__col:first-child {
+    @include respond(mobilemini) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+}
+
+.hero-page__head {
+    margin-bottom: 70px;
+
+    @include respond(desktop) {
+      margin-bottom: 30px;
+    }
+
+    @include respond(mobilemini) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+}
+
+.hero-page__title {
+    color: #EB2655;
+    font-size: 60px;
+    line-height: 73px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @include respond(desktop) {
+      font-size: 48px;
+      line-height: 50px;
+      margin-bottom: 0;
+    }
+
+    @include respond(mobilemini) {
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.hero-page__subtitle {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    display: inline-block;
+    margin-bottom: 30px;
+
+    @include respond(desktop) {
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 18px;
+    }
+
+    @include respond(mobilemini) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.hero-page__descr {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    @include respond(desktop) {
+      font-size: 18px;
+    }
+
+    @include respond(mobilemini) {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+.hero-page__content,
+.hero-page__info {
+    display: flex;
+    align-items: center;
+}
+
+.hero-page__content {
+    @include respond(mobilemini) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+}
+
+.hero-page__info {
+    @include respond(mobilemini) {
+      margin-top: 10px;
+    }
+}
+
+.hero-page__btn {
+    background: linear-gradient(180deg, #EB2655 0%, #72021D 100%);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    min-height: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    max-width: 245px;
+    width: 100%;
+
+    @include respond(mobilemini) {
+      margin-right: 0;
+    }
+}
+
+.hero-page__info {
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+}
+
+.hero-page__info-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.casino-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+
+    @include respond(mobilemini) {
+      width: 314px;
+      margin: 0 auto;
+    }
+}
+
+.casino-img_connect {
+  width: 595px;
+  margin-left: auto;
+
+  @include respond(mobilemini) {
+    width: 223px;
+  }
+}
+
+.hero-page__offer {
+    background: #050A1C;
+    border-radius: 10px;
+    padding: 35px 56px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+
+        .hero-page__offer-link {
+            text-decoration: none;
+            color: #EB2655;
+        }
+    
+    @include respond(desktop) {
+      margin-top: 30px;
+    }
+
+    @include respond(mobilemini) {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 15px;
     }
 }
