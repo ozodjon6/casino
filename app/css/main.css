@@ -286,7 +286,7 @@ template {
 .hero-page::before {
   content: '';
   position: absolute;
-  background-image: url(../../images/image-2.png),url(../../images/image-1.png);
+  background-image: url(../images/image-2.png),url(../images/image-1.png);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -299,7 +299,7 @@ template {
   }
 }
 .hero-page__connect::before {
-  background-image: url(../../images/image-3.png)
+  background-image: url(../images/image-3.png)
 }
 .header-page {
   display: -webkit-box;
@@ -676,7 +676,7 @@ template {
   top: -20vh;
   left: 50%;
   margin-left: -30%;
-  background-image: url(../../images/image-3.png);
+  background-image: url(../images/image-3.png);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -722,7 +722,7 @@ template {
   position: absolute;
   top: -140px;
   left: -140px;
-  background-image: url(../../images/coin.png);
+  background-image: url(../images/coin.png);
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -772,7 +772,7 @@ template {
   position: absolute;
   top: -50px;
   margin-left: -55px;
-  background-image: url(../../images/icon-1.png);
+  background-image: url(../images/icon-1.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -780,10 +780,10 @@ template {
   height: 99px
 }
 .card__bonus::before {
-  background-image: url(../../images/icon-2.png)
+  background-image: url(../images/icon-2.png)
 }
 .card__game::before {
-  background-image: url(../../images/icon-3.png)
+  background-image: url(../images/icon-3.png)
 }
 .card__title {
   font-size: 24px;
