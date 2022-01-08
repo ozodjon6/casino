@@ -92,6 +92,7 @@
     padding-left: 15px;
     margin-left: 30px;
     position: relative;
+    z-index: 0;
     
     @include respond(mobilemini) {
       margin-left: 0;
@@ -283,7 +284,7 @@
     text-decoration: none;
     max-width: 245px;
     width: 100%;
-    z-index: 10;
+    z-index: 0;
 
     @include respond(mobilemini) {
       margin-right: 0;

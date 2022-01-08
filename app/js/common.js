@@ -1,55 +1,31 @@
-window.addEventListener('DOMContentLoaded', () => {
+const openBtn = document.querySelector(".header-page__btn:last-child");
+const openSignBtn = document.querySelector(".header-page__btn:first-child");
+const popupPage = document.querySelector(".popup-page");
+const signPage = document.querySelector(".sign-page");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelectorAll(".close-btn");
 
-    // Rating stars
 
-    let $star_rating = $('.star-rating .fa');
+openBtn.addEventListener("click", function() {
+    popupPage.classList.add("active")
+    overlay.classList.add("active")
+})
 
-    let SetRatingStar = function () {
-        return $star_rating.each(function () {
-            if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
-                return $(this).removeClass('fa-star-o').addClass('fa-star');
-            } else {
-                return $(this).removeClass('fa-star').addClass('fa-star-o');
-            }
-        });
-    };
+openSignBtn.addEventListener("click", function() {
+    signPage.classList.add("active")
+    overlay.classList.add("active")
+})
 
-    $star_rating.on('click', function () {
-        $star_rating.siblings('input.rating-value').val($(this).data('rating'));
-        return SetRatingStar();
-    });
-
-    SetRatingStar();
-    $(document).ready(function () {
-
-    });
-
-    // add class and remove color white and black
-
-    $(".header-page__btn").click(function (e) {
-        e.preventDefault();
-        $(".header-page__btn").removeClass("active");
-        $(this).addClass("active")
-        $("body").addClass("active")
+for (let i = 0; i < closeBtn.length; i++) {
+    closeBtn[i].addEventListener("click", function() {
+        popupPage.classList.remove("active");
+        signPage.classList.remove("active");
+        overlay.classList.remove("active")
     })
+}
 
-    $(".header-page__btn:first-child").click(function (e) {
-        $("body").removeClass("active")
-    })
-
-    // add class and remove class grid item
-
-    $(".toggle-btn__item").click(function (e) {
-        e.preventDefault();
-        $(".toggle-btn__item").removeClass("active");
-        $(this).addClass("active")
-        $(".grid").removeClass("active")
-    })
-
-    $(".toggle-btn__item:last-child").click(function () {
-        $(".grid").addClass("active")
-    })
-
-
-
+overlay.addEventListener("click", function() {
+    popupPage.classList.remove("active");
+    signPage.classList.remove("active");
+    this.classList.remove("active")
 })
