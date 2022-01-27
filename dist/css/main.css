@@ -329,6 +329,12 @@ template {
   width: 178px;
   height: 20px
 }
+.site-logo-icon {
+  width: 41px;
+  height: 41px;
+  display: inline-block;
+  margin-right: 10px;
+}
 .site-logo img {
   max-width: 100%;
   max-height: 100%
